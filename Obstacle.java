@@ -6,14 +6,24 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Obstacle extends Actor
+public abstract class Obstacle extends Actor
 {
-    /**
-     * Act - do whatever the Obstacle wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
+    
+    protected abstract void fall();
+    
+    protected boolean isOnGround()
     {
-        // Add your action code here.
+        Actor ground = getOneObjectAtOffset(0,getImage().getHeight()
+                                                / 2, Platform.class);
+        return ground != null;
+    }
+    
+    protected void removeOutOfBounds(Obstacle obstacle)
+    {
+            if(obstacle.getY() > getWorld().getHeight() + 
+                                obstacle.getImage().getWidth() / 2)
+            {
+                getWorld().removeObject(obstacle);
+            }
     }
 }
