@@ -9,8 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Level1 extends World
 {
     
-    private final float GRAVITY = 0.0667f;
+    private final float GRAVITY = 0.1f;
     private final GreenfootSound MUSIC = new GreenfootSound("zapsplat_024.mp3");
+    private final int SPEED = 3;
+    private final float JUMP_FORCE = 5.6f;
+    private final int MAX_HEALTH = 3;
+    private final int MAX_POWERUP = 3;
+    private final Class NEXT_LEVEL = Level2.class;
     /**
      * Constructor for objects of class BrickWorld.
      * 
@@ -34,7 +39,7 @@ public class Level1 extends World
     private void prepare()
     {
         setPaintOrder(Player.class, Platform.class, Obstacle.class, Collectable.class, Door.class, HUD.class);
-        Player player = new Player(3, 5.6f, GRAVITY, 3, 3, Level2.class, MUSIC);
+        Player player = new Player(SPEED, JUMP_FORCE, GRAVITY, MAX_HEALTH, MAX_POWERUP, NEXT_LEVEL, MUSIC);
         addObject(player,31,762);
         Door door = new Door();
         addObject(door,1180,39);
@@ -61,6 +66,13 @@ public class Level1 extends World
         TrapDoor trapDoor2 = new TrapDoor(GRAVITY);
         addObject(trapDoor2,354,169);
         smBrickWall.setLocation(754,640);
+        SmBrickWall smBrickWall3 = new SmBrickWall();
+        addObject(smBrickWall3,492,712);
+        smBrickWall3.setLocation(473,689);
+        SmBrickWall smBrickWall4 = new SmBrickWall();
+        addObject(smBrickWall4,841,520);
+        SmBrickWall smBrickWall5 = new SmBrickWall();
+        addObject(smBrickWall5,400,281);
     }
     
     private void spawn()
