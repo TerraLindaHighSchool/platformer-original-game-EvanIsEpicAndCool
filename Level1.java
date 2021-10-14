@@ -10,7 +10,7 @@ public class Level1 extends World
 {
     
     private final float GRAVITY = 0.1f;
-    private final GreenfootSound MUSIC = new GreenfootSound("zapsplat_024.mp3");
+    private final GreenfootSound MUSIC = new GreenfootSound("AboveGround.mp3");
     private final int SPEED = 3;
     private final float JUMP_FORCE = 5.6f;
     private final int MAX_HEALTH = 3;
@@ -73,6 +73,7 @@ public class Level1 extends World
         addObject(smBrickWall4,841,520);
         SmBrickWall smBrickWall5 = new SmBrickWall();
         addObject(smBrickWall5,400,281);
+        smBrickWall5.setLocation(437,320);
     }
     
     private void spawn()

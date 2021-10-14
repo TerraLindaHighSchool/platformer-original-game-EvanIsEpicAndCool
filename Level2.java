@@ -10,7 +10,7 @@ public class Level2 extends World
 {
     
     private final float GRAVITY = 0.1f;
-    private final GreenfootSound MUSIC = new GreenfootSound("incompetech_tribal.mp3");
+    private final GreenfootSound MUSIC = new GreenfootSound("Underwater.mp3");
     private final int SPEED = 3;
     private final float JUMP_FORCE = 5.6f;
     private final int MAX_HEALTH = 3;
@@ -57,10 +57,6 @@ public class Level2 extends World
         addObject(gem,90,248);
         Gem gem2 = new Gem();
         addObject(gem2,146,249);
-        Bomb bomb = new Bomb(GRAVITY);
-        addObject( new Bomb(GRAVITY),802,200);
-        Bomb bomb2 = new Bomb(GRAVITY);
-        addObject(bomb2,323,389);
         TrapDoor trapDoor = new TrapDoor(GRAVITY);
         addObject(trapDoor,995,467);
         TrapDoor trapDoor2 = new TrapDoor(GRAVITY);
@@ -74,6 +70,54 @@ public class Level2 extends World
         SmBrickWall smBrickWall5 = new SmBrickWall();
         addObject(smBrickWall5,400,281);
         smBrickWall4.setLocation(867,552);
+        removeObject(brickWall);
+        removeObject(smBrickWall3);
+        removeObject(smBrickWall);
+        removeObject(smBrickWall4);
+        removeObject(trapDoor);
+        removeObject(smBrickWall2);
+        removeObject(smBrickWall5);
+        removeObject(trapDoor2);
+        removeObject(brickWall2);
+        removeObject(gem);
+        removeObject(gem2);
+        door.setLocation(902,324);
+        BlueWall blueWall = new BlueWall();
+        addObject(blueWall,783,506);
+        removeObject(blueWall);
+        addObject(blueWall,846,466);
+        BlueWall blueWall2 = new BlueWall();
+        addObject(blueWall2,270,166);
+        blueWall.setLocation(998,562);
+        BlueWall blueWall3 = new BlueWall();
+        addObject(blueWall3,27,536);
+        SmBlueWall smBlueWall = new SmBlueWall();
+        addObject(smBlueWall,485,395);
+        SmBlueWall smBlueWall2 = new SmBlueWall();
+        addObject(smBlueWall2,822,678);
+        SmBlueWall smBlueWall3 = new SmBlueWall();
+        addObject(smBlueWall3,641,57);
+        SmBlueWall smBlueWall4 = new SmBlueWall();
+        addObject(smBlueWall4,1111,207);
+        SmBlueWall smBlueWall5 = new SmBlueWall();
+        addObject(smBlueWall5,909,384);
+        Powerup powerup = new Powerup();
+        addObject(powerup,1071,172);
+        Powerup powerup2 = new Powerup();
+        addObject(powerup2,1115,172);
+        Powerup powerup3 = new Powerup();
+        addObject(powerup3,1155,170);
+        powerup3.setLocation(1149,168);
+        smBlueWall2.setLocation(663,678);
+        Bubble bubble = new Bubble(0);
+        addObject(bubble,656,423);
+        Bubble bubble2 = new Bubble(0);
+        addObject(bubble2,1094,319);
+        Bubble bubble3 = new Bubble(0);
+        addObject(bubble3,763,223);
+        smBlueWall.setLocation(500,506);
+        SmBlueWall smBlueWall6 = new SmBlueWall();
+        addObject(smBlueWall6,1054,465);
     }
     
     private void spawn()

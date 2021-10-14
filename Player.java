@@ -129,6 +129,7 @@ public class Player extends Actor
         {
             yVelocity = JUMP_FORCE;
             isJumping = true;
+            Greenfoot.playSound("jump.wav");
         }
         if(isJumping && yVelocity > 0)
         {
@@ -139,7 +140,7 @@ public class Player extends Actor
         {
             isJumping = false;
         }
-        Greenfoot.playSound("jump.wav");
+        
     }
 
     private void fall() 
