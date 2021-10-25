@@ -23,6 +23,10 @@ public class Rock extends Obstacle
 
     protected void fall()
     { 
-        
+        if(!isOnGround())   
+        {
+            yVelocity += GRAVITY;
+            setLocation(getX(), getY() + (int) yVelocity);
+        }
     }   
 }

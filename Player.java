@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Player here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Evan Egan 
+ * @version 1.7 (7)
  */
 public class Player extends Actor
 {
@@ -121,6 +121,14 @@ public class Player extends Actor
         {
             isWalking = false;
         }
+        if(Greenfoot.isKeyDown("shift") && (Greenfoot.isKeyDown("right")))
+        {
+            move(speed + 1);
+        }
+        if(Greenfoot.isKeyDown("shift") && (Greenfoot.isKeyDown("left")))
+        {
+            move(-speed - 1);
+        }
     }
 
     private void jump() 
@@ -204,6 +212,14 @@ public class Player extends Actor
         {
             yVelocity = -1;
             fall();
+        }
+        if(isTouching(Lava.class))
+        {
+            Greenfoot.setWorld(new Level3());
+        }
+        if(isTouching(DeathTrigger.class))
+        {
+            Greenfoot.setWorld(new Level4());
         }
     }
 
