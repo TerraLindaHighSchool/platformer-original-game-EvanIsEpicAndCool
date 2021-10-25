@@ -122,7 +122,7 @@ public class Level2 extends World
     
     private void spawn()
     {
-        if(Math.random() < 0.01)
+        if(Math.random() < 0.005)
         {
             addObject(new Bubble(GRAVITY), Greenfoot.getRandomNumber(1200), -30);
         }
