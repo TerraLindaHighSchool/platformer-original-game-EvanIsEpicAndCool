@@ -15,7 +15,7 @@ public class Level4 extends World
     private final float JUMP_FORCE = 5.6f;
     private final int MAX_HEALTH = 3;
     private final int MAX_POWERUP = 3;
-    private final Class NEXT_LEVEL = Level3.class;
+    private final Class NEXT_LEVEL = WinSplash.class;
     /**
      * Constructor for objects of class BrickWorld.
      * 
