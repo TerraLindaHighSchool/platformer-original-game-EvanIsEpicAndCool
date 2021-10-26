@@ -67,6 +67,8 @@ public class Level4 extends World
         addObject(rock3,606,23);
         DeathTrigger deathTrigger = new DeathTrigger();
         addObject(deathTrigger,598,762);
+        Tip tip = new Tip();
+        addObject(tip,146,500);
     }
     
     private void spawn()

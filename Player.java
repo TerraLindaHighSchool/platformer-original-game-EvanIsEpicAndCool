@@ -216,10 +216,12 @@ public class Player extends Actor
         if(isTouching(Lava.class))
         {
             Greenfoot.setWorld(new Level3());
+            MUSIC.stop();
         }
         if(isTouching(DeathTrigger.class))
         {
             Greenfoot.setWorld(new Level4());
+            MUSIC.stop();
         }
     }
 
